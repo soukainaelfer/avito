@@ -22,6 +22,9 @@ public class VilleService extends AbstractFacade<Ville>{
     public Ville createVille(){
         Ville ville =new Ville();
         ville.setNom("Marrakech");
+        ville.setId("Marr");
+        ville.setNom("Rabat");
+        ville.setId("rab");
         create(ville);
         return ville;
         

@@ -24,19 +24,20 @@ public class Quartier implements Serializable {
    
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
     private String nom;
     @ManyToOne
     private Ville ville;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
+
+    
 
     public String getNom() {
         return nom;

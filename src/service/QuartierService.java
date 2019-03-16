@@ -5,10 +5,23 @@
  */
 package service;
 
+import bean.Quartier;
+import bean.Ville;
+import java.util.List;
+
 /**
  *
  * @author SOUKAINA
  */
-public class QuartierService {
+public class QuartierService extends AbstractFacade<Quartier> {
+    
+    public QuartierService(){
+        super(Quartier.class);
+    }
+    
+     public List<Quartier>findQuartierByVille(Ville ville){
+        return getMultipleResult("SELECT q FROM Quartier q where q.ville.id='"+ville.getId()+"'");
+            
+    }
     
 }
